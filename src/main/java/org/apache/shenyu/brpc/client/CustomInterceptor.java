@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.apache.shenyu.brpc;
+package org.apache.shenyu.brpc.client;
 
 import com.baidu.brpc.exceptions.RpcException;
 import com.baidu.brpc.interceptor.AbstractInterceptor;

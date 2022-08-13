@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.apache.shenyu.brpc;
+package org.apache.shenyu.brpc.server;
 
 import com.baidu.brpc.server.RpcServer;
 import com.baidu.brpc.server.RpcServerOptions;

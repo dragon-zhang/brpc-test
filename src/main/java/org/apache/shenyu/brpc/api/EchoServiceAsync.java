@@ -14,21 +14,12 @@
  * limitations under the License.
  */
 
-package org.apache.shenyu.brpc;
+package org.apache.shenyu.brpc.api;
 
-import com.baidu.brpc.protocol.BrpcMeta;
+import com.baidu.brpc.client.RpcCallback;
 
-/**
- * Created by huwenwei on 2018/11/23.
- */
-public interface EchoService {
-    /**
-     * brpc/sofa：
-     * serviceName默认是包名 + 类名，methodName是proto文件Service内对应方法名，
-     * hulu：
-     * serviceName默认是类名，methodName是proto文件Service内对应方法index。
-     */
-    @BrpcMeta(serviceName = "example.EchoService", methodName = "Echo")
-//    @BrpcMeta(serviceName = "EchoService", methodName = "0")
-    EchoResponse echo(EchoRequest request);
+import java.util.concurrent.Future;
+
+public interface EchoServiceAsync extends EchoService {
+    Future<EchoResponse> echo(EchoRequest request, RpcCallback<EchoResponse> callback);
 }

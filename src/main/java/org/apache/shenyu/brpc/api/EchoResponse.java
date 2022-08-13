@@ -14,21 +14,15 @@
  * limitations under the License.
  */
 
-package org.apache.shenyu.brpc;
+package org.apache.shenyu.brpc.api;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.baidu.bjf.remoting.protobuf.annotation.ProtobufClass;
+import lombok.Getter;
+import lombok.Setter;
 
-public class EchoServiceImpl implements EchoService {
-    private static final Logger LOG = LoggerFactory.getLogger(EchoServiceImpl.class);
-
-    @Override
-    public EchoResponse echo(EchoRequest request) {
-        String message = request.getMessage();
-        EchoResponse response = new EchoResponse();
-        response.setMessage(message);
-        LOG.debug("EchoService.echo, request={}, response={}",
-                request.getMessage(), response.getMessage());
-        return response;
-    }
+@ProtobufClass
+@Setter
+@Getter
+public class EchoResponse {
+    private String message;
 }

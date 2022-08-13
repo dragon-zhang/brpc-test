@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.apache.shenyu.brpc;
+package org.apache.shenyu.brpc.client;
 
 import com.baidu.brpc.client.BrpcProxy;
 import com.baidu.brpc.client.RpcCallback;
@@ -24,6 +24,9 @@ import com.baidu.brpc.exceptions.RpcException;
 import com.baidu.brpc.interceptor.Interceptor;
 import com.baidu.brpc.loadbalance.LoadBalanceStrategy;
 import com.baidu.brpc.protocol.Options;
+import org.apache.shenyu.brpc.api.EchoRequest;
+import org.apache.shenyu.brpc.api.EchoResponse;
+import org.apache.shenyu.brpc.api.EchoServiceAsync;
 
 import java.util.ArrayList;
 import java.util.List;

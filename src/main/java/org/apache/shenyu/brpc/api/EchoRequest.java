@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.apache.shenyu.brpc;
+package org.apache.shenyu.brpc.api;
 
 import com.baidu.bjf.remoting.protobuf.annotation.ProtobufClass;
 import lombok.Getter;
